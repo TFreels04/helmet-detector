@@ -1,22 +1,32 @@
-# Helmet vs No-Helmet Classifier (ResNet18)
+# 🪖 Helmet vs No-Helmet Classifier (ResNet18)
 
-**Goal:** Classify if a person is wearing a safety helmet from an image.
+This project implements a **Convolutional Neural Network (ResNet18)** to classify whether a person is **wearing a safety helmet** or **not wearing a helmet**.  
+It is part of my **AI Engineering portfolio project** to showcase end-to-end computer vision skills: model training, conversion, and deployment.  
 
-**Tech:** PyTorch, TorchVision, transfer learning (ResNet18), ONNX export.
+---
 
-## Results (from Kaggle run)
-- Train/Val/Test split: 70/15/15 on a small demo dataset (49 images total)
-- Best validation accuracy: **100%**
-- Test accuracy: **90%**
-- Confusion Matrix (test):
+## 📊 Model Details
+- **Architecture:** ResNet18 (transfer learning)  
+- **Framework:** PyTorch & TorchVision  
+- **Export:** ONNX and Safetensors formats  
+- **Deployment:** Hugging Face Spaces (Gradio demo)  
 
-![Confusion Matrix](confusion_matrix.png)
+---
 
-## Quickstart (Local)
+## 📈 Results
+- Dataset split: **70% train / 15% validation / 15% test** (49 images total)  
+- **Best validation accuracy:** 100%  
+- **Test accuracy:** 90%  
+
+Confusion Matrix (test set):  
+![Confusion Matrix](https://huggingface.co/TristanF04/helmet-detector/resolve/main/confusion_matrix.png)
+
+---
+
+## 🚀 Quickstart (Local)
+
+### 1. Setup environment
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-python infer.py sample_images/Helmet6.jpg
-python infer.py sample_images/WithoutHelmet9.jpg
-
